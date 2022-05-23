@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(228, 11%, 9%);
+    color: hsl(0, 0%, 100%);
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    outline: none;
+    border: 0;
+    color: white;
+}
+/*Card section*/
+
+main {
+    background-color: hsl(215, 22%, 15%);
+    width: 24rem;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+main.rating{
+    z-index: 2;
+}
+/*Star icon*/
+.star {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: hsl(231, 13%, 19%);
+}
+
+.star img {
+    width: 40%;
+}
+
+/*Intro text*/
+.intro-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: hsl(217, 12%, 63%);
+}
+
+/*Rates section*/
+.rates {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rates .rate {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: hsl(231, 13%, 19%);
+    transition: all 0.5s ease;
+}
+
+.rates .rate:hover {
+    background-color: hsl(216, 12%, 54%);
+    cursor: pointer;
+}
+
+.rates .rate:focus {
+    background-color: hsl(25, 97%, 53%);
+}
+
+/*Cta section*/
+.cta button {
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 20rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: hsl(25, 97%, 53%);
+    transition: all 0.5s ease;
+}
+
+.cta button:hover {
+    color: hsl(25, 97%, 53%);
+    background-color: white;
+    cursor: pointer;
+}
+
+main.thanks {
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.thanks span {
+    padding: 5px 20px;
+    background-color: hsl(231, 13%, 19%);
+    font-size: 0.8rem;
+    border-radius: 2rem;
+    color: hsl(25, 97%, 53%);
+}
+
+.thanks .intro-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+}
+
+/*Clicked state*/
+.clicked {
+    display: none;
+}
+
+/*Mobile design*/
+@media screen and (max-width: 375px){
+
+    main {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .star{
+        width: 35px;
+        height: 35px;
+    }
+
+    .rates .rate {
+        width: 35px;
+        height: 35px;
+    }
+
+    .thanks .select {
+        margin: 10px 0;
+    }
+}
+
